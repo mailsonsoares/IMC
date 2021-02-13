@@ -1,0 +1,23 @@
+body{
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+header{
+	background-color: #38819A;
+	height: 3em;
+	color: #FFF;
+    padding: 15px 0;
+}
+
+header h1{
+    text-align:center;
+    margin:auto;    
+    font-size: 2em;
+    
+}
+
+.container{   
+    padding: 4px 0;
+	height: 100%;	
+} 
