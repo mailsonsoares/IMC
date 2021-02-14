@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">    
@@ -15,11 +17,42 @@
             <h1>
                 Indice de Massa Corporal
             </h1>
-        </div> 
-              
+        </div>              
     </header>
 
     <main>
+        <table class = "imc">
+            <!-- <thead> -->
+                <tr>
+                    <th>Paciente</th>
+                    <th>IMC</th>
+                    <th>Peso (Kg)</th>
+                    <th>Altura (m)</th>
+                    <th>Gordura (%)</th>
+                    <th colspan="2">Ações</th>
+                </tr>                
+            <!-- </thead> -->
+            <!-- <tbody> -->
+                <tr>
+                    <td class="nome">Mailson</td>
+                    <td class="numerico">29,8</td>
+                    <td class="numerico">100</td>
+                    <td class="numerico">1,83</td>
+                    <td class="numerico">26</td>
+                    <td class="acoes" id="info"> <img class="eye" src="img/eye.ico"> </td>
+                    <td class="acoes" id="delete"> - </td>
+                </tr>
+                <tr>
+                    <td class="nome">Pedro</td>
+                    <td class="numerico">28,7</td>
+                    <td class="numerico">98</td>
+                    <td class="numerico">1,80</td>
+                    <td class="numerico">25</td>
+                    <td class="acoes" > <img class="eye" src="img/eye.ico"> </td>
+                    <td class="acoes" > - </td>
+                </tr>
+            <!-- </tbody> -->
+        </table>
 
     </main>
 

@@ -1,6 +1,5 @@
 body{
-	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-	font-size: 12px;
+	font-family: 'Montserrat', sans-serif;
 }
 
 header{
@@ -21,3 +20,38 @@ header h1{
     padding: 4px 0;
 	height: 100%;	
 } 
+
+.imc{	
+	width: 75%;
+	
+	margin: 10px auto;	
+}
+
+.imc tr th{
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #4b4949;
+	/* border: 2px solid #000000; */
+	background-color: #EEEEEE;
+}
+
+.imc th, td{
+	border: 2px solid #CCCCCC;
+	padding: .7em;
+	margin: 0;
+}
+
+.numerico{
+	text-align: right;
+}
+
+.acoes{
+	
+}
+
+.eye{
+	vertical-align: middle;
+	width: 35px;
+	height: 32px;
+}
