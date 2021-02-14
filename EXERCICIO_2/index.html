@@ -21,38 +21,43 @@
     </header>
 
     <main>
-        <table class = "imc">
-            <!-- <thead> -->
-                <tr>
-                    <th>Paciente</th>
-                    <th>IMC</th>
-                    <th>Peso (Kg)</th>
-                    <th>Altura (m)</th>
-                    <th>Gordura (%)</th>
-                    <th colspan="2">Ações</th>
-                </tr>                
-            <!-- </thead> -->
-            <!-- <tbody> -->
-                <tr>
-                    <td class="nome">Mailson</td>
-                    <td class="numerico">29,8</td>
-                    <td class="numerico">100</td>
-                    <td class="numerico">1,83</td>
-                    <td class="numerico">26</td>
-                    <td class="acoes" id="info"> <img class="eye" src="img/eye.ico"> </td>
-                    <td class="acoes" id="delete"> - </td>
-                </tr>
-                <tr>
-                    <td class="nome">Pedro</td>
-                    <td class="numerico">28,7</td>
-                    <td class="numerico">98</td>
-                    <td class="numerico">1,80</td>
-                    <td class="numerico">25</td>
-                    <td class="acoes" > <img class="eye" src="img/eye.ico"> </td>
-                    <td class="acoes" > - </td>
-                </tr>
-            <!-- </tbody> -->
-        </table>
+        <section class="container">
+            <h2>Pacientes</h2>
+            <table class = "tabela-imc">
+                <!-- <thead> -->
+                    <tr>
+                        <th>Paciente</th>
+                        <th>IMC</th>
+                        <th>Peso (Kg)</th>
+                        <th>Altura (m)</th>
+                        <th>Gordura (%)</th>
+                        <th colspan="2">Ações</th>
+                    </tr>                
+                <!-- </thead> -->
+                <!-- <tbody> -->
+                    <tr class="paciente">
+                        <td class="nome">Mailson</td>
+                        <td class="imc">29,8</td>
+                        <td class="peso">100</td>
+                        <td class="altura">1,83</td>
+                        <td class="gordura">26</td>
+                        <td class="info" id="info"> <button>Info</button> </td>
+                        <td class="delete" id="delete"> <button>Del</button> </td>
+                    </tr>
+                    <tr class="paciente">
+                        <td class="nome">Pedro</td>
+                        <td class="imc">28,7</td>
+                        <td class="peso">98</td>
+                        <td class="altura">1,80</td>
+                        <td class="gordura">25</td>
+                        <td class="info" id="info"> <button class="info">Info</button> </td>
+                        <td class="delete" id="delete"> <button class="delete">Del</button> </td>
+                    </tr>
+                <!-- </tbody> -->
+            </table>
+
+        </section>
+        
 
     </main>
 

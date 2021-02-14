@@ -1,3 +1,7 @@
+/* *{
+	box-sizing: border-box;
+} */
+
 body{
 	font-family: 'Montserrat', sans-serif;
 }
@@ -12,22 +16,42 @@ header{
 header h1{
     text-align:center;
     margin:auto;    
-    font-size: 2em;
-    
+    font-size: 2em;    
 }
+
+main{
+	width: 940px;
+	margin: auto;
+} 
 
 .container{   
     padding: 4px 0;
-	height: 100%;	
+	width: 100%;	
+	margin: 0 auto;
 } 
 
-.imc{	
-	width: 75%;
-	
-	margin: 10px auto;	
+.container h2{
+	font-size: 1.5em;
+	color: #4b4949;
+	font-weight: bold;
+	display: block;
+	padding-bottom: .5em;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: .5em;
 }
 
-.imc tr th{
+
+
+.tabela-imc{	
+	/* width: 100%;	
+	margin: 25px auto;	 */
+
+	width: 100%;
+	margin-bottom : .5em;
+    table-layout: fixed;
+}
+
+.tabela-imc tr th{
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -36,22 +60,17 @@ header h1{
 	background-color: #EEEEEE;
 }
 
-.imc th, td{
+.tabela-imc th, td{
 	border: 2px solid #CCCCCC;
-	padding: .7em;
+	padding: .4em;
 	margin: 0;
 }
 
-.numerico{
+.paciente .imc, .peso, .altura, .gordura{
 	text-align: right;
 }
 
-.acoes{
-	
+ .info, .delete{
+	text-align: center;
 }
 
-.eye{
-	vertical-align: middle;
-	width: 35px;
-	height: 32px;
-}
