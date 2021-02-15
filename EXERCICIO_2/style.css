@@ -43,9 +43,6 @@ main{
 
 
 .tabela-imc{	
-	/* width: 100%;	
-	margin: 25px auto;	 */
-
 	width: 100%;
 	margin-bottom : .5em;
     table-layout: fixed;
