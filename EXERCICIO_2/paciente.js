@@ -3,3 +3,6 @@
 
 /* Testes javascript */
 /* 2 */
+
+/* Testes javascript */
+/* 3 */
