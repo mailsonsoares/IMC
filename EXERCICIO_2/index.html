@@ -23,7 +23,7 @@
     <main>
         <section class="container">
             <h2>Pacientes</h2>
-            <table class = "tabela-imc">
+            <table class = "tabela-imc" data-tabela-pacient>
                 <!-- <thead> -->
                     <tr>
                         <th>Paciente</th>
@@ -35,7 +35,7 @@
                     </tr>                
                 <!-- </thead> -->
                 <!-- <tbody> -->
-                    <tr class="paciente">
+                    <tr class="linhas-pacientes" data-linha-pacient>
                         <td class="nome">Mailson</td>
                         <td class="imc">29,8</td>
                         <td class="peso">100</td>
@@ -43,38 +43,29 @@
                         <td class="gordura">26</td>
                         <td class="info" id="info"> <button>Info</button> </td>
                         <td class="delete" id="delete"> <button>Del</button> </td>
-                    </tr>
-                    <tr class="paciente">
-                        <td class="nome">Pedro</td>
-                        <td class="imc">28,7</td>
-                        <td class="peso">98</td>
-                        <td class="altura">1,80</td>
-                        <td class="gordura">25</td>
-                        <td class="info" id="info"> <button class="info">Info</button> </td>
-                        <td class="delete" id="delete"> <button class="delete">Del</button> </td>
-                    </tr>
+                    </tr>                    
                 <!-- </tbody> -->
             </table>
         </section>
 
         <section class="container">
             <h2>Novo Paciente</h2>
-            <form id = "form-adiciona-paciente" action="">
+            <form id = "form-novo-pacient" action="" data-form-novo-pacient>
                 <div class="grupo">
-                    <label for="input-nome">Nome:</label>
-                    <input type="text" id="input-nome" name="input-nome" class="campo" placeholder="Digite o primeiro nome: ">
+                    <label for="inputNome">Nome:</label>
+                    <input type="text" id="inputNome" name="inputNome" class="campo" placeholder="Digite o primeiro nome: ">
                 </div>
                 <div class="grupo">
-                    <label for="input-peso">Peso:</label>
-                    <input type="text" id="input-peso" name="input-peso" class="campo" placeholder="Digite seu peso: ">
+                    <label for="inputPeso">Peso:</label>
+                    <input type="text" id="inputPeso" name="inputPeso" class="campo" placeholder="Digite seu peso: ">
                 </div>
                 <div class="grupo">
-                    <label for="input-altura">Altura:</label>
-                    <input type="text" id="input-altura" name="input-altura" class="campo" placeholder="Digite sua altura: ">
+                    <label for="inputAltura">Altura:</label>
+                    <input type="text" id="inputAltura" name="inputAltura" class="campo" placeholder="Digite sua altura: ">
                 </div>
                 <div class="grupo">
-                    <label for="input-gordura">Gordura (%):</label>
-                    <input type="text" id="input-gordura" name="input-gordura" class="campo" placeholder="Digite seu percentual de gordura ">
+                    <label for="inputGordura">Gordura (%):</label>
+                    <input type="text" id="inputGordura" name="inputGordura" class="campo" placeholder="Digite seu percentual de gordura ">
                 </div>
                 <button id="btn-adiciona" data-form-btn-adiciona>Adicionar</button>
             </form>

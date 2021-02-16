@@ -15,18 +15,17 @@ header{
 }
 
 header h1{
-	/* display:inline-block; */
+	display:inline-block;
     text-align:center;
     margin:auto;    
     font-size: 2em;    
 }
 
-main{
+
+/* main{
 	width: 940px;
 	margin: auto;
-} 
-
-
+}  */
 
 .container{   
     padding: 4px 0;
@@ -61,9 +60,12 @@ main{
 	color: #4b4949;
 	/* border: 2px solid #000000; */
 	background-color: #EEEEEE;
+	border: 2px solid #CCCCCC;
+	padding: .4em;
+	margin: 0;
 }
 
-.tabela-imc th, td{
+.linhas-pacientes td{
 	border: 2px solid #CCCCCC;
 	padding: .4em;
 	margin: 0;
