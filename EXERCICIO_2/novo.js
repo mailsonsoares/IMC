@@ -18,12 +18,13 @@ novoPaciente.addEventListener('click', (eventoDoClick) => { //quando o evento de
     const nome_input = objNovoPacient.nome;
     const peso_input = objNovoPacient.peso;
     const altura_input = objNovoPacient.altura;
+    const imc_input = objNovoPacient.imc;
     const gordura_input = objNovoPacient.gordura;
     
     const tabela = document.querySelector('[data-tabela-pacient]'); //captura tabela    
 
     const conteudo = `<td class="nome">${nome_input}</td>
-                      <td class="imc"></td>
+                      <td class="imc">${imc_input}</td>
                       <td class="peso">${peso_input}</td>
                       <td class="altura">${altura_input}</td>
                       <td class="gordura">${gordura_input}</td>
@@ -31,7 +32,7 @@ novoPaciente.addEventListener('click', (eventoDoClick) => { //quando o evento de
                       <td class="delete" id="delete"> <button> Del </button> </td>`;
 
     const novaLinha = document.createElement('tr'); //criando nova linha;
-    
+
     novaLinha.classList.add('linhas-pacientes'); //atribuindo a mesma classe css a linha
 
     novaLinha.innerHTML = conteudo;
@@ -47,9 +48,17 @@ function montaObjetoPaciente(form){
 		nome: form.inputNome.value, 
 		peso: form.inputPeso.value,
 		altura: form.inputAltura.value,
+        imc: calculaImc(form.inputPeso.value, form.inputAltura.value),
 		gordura: form.inputGordura.value
 		// imc: calculoImc(form.peso.value,form.altura.value)
 	}
 	return objPaciente; //retorna o objeto
 	
+}
+
+function calculaImc(peso, altura){
+    let imc = 0;
+    imc = peso / (altura * altura);
+
+    return imc.toFixed(2);
 }
