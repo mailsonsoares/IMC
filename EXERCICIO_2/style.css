@@ -7,6 +7,7 @@ body{
 }
 
 header{
+	width: 100%;
 	background-color: #38819A;
 	height: 3em;
 	color: #FFF;
@@ -14,6 +15,7 @@ header{
 }
 
 header h1{
+	/* display:inline-block; */
     text-align:center;
     margin:auto;    
     font-size: 2em;    
@@ -24,6 +26,8 @@ main{
 	margin: auto;
 } 
 
+
+
 .container{   
     padding: 4px 0;
 	width: 100%;	
@@ -31,6 +35,7 @@ main{
 } 
 
 .container h2{
+	/* display: block; */
 	font-size: 1.5em;
 	color: #4b4949;
 	font-weight: bold;
@@ -38,6 +43,7 @@ main{
 	padding-bottom: .5em;
 	border-bottom: 1px solid #ccc;
 	margin-bottom: .5em;
+	margin-top: 1em;
 }
 
 

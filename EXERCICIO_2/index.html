@@ -55,7 +55,29 @@
                     </tr>
                 <!-- </tbody> -->
             </table>
+        </section>
 
+        <section class="container">
+            <h2>Novo Paciente</h2>
+            <form id = "form-adiciona-paciente" action="">
+                <div class="grupo">
+                    <label for="input-nome">Nome:</label>
+                    <input type="text" id="input-nome" name="input-nome" class="campo" placeholder="Digite o primeiro nome: ">
+                </div>
+                <div class="grupo">
+                    <label for="input-peso">Peso:</label>
+                    <input type="text" id="input-peso" name="input-peso" class="campo" placeholder="Digite seu peso: ">
+                </div>
+                <div class="grupo">
+                    <label for="input-altura">Altura:</label>
+                    <input type="text" id="input-altura" name="input-altura" class="campo" placeholder="Digite sua altura: ">
+                </div>
+                <div class="grupo">
+                    <label for="input-gordura">Gordura (%):</label>
+                    <input type="text" id="input-gordura" name="input-gordura" class="campo" placeholder="Digite seu percentual de gordura ">
+                </div>
+                <button id="btn-adiciona" data-form-btn-adiciona>Adicionar</button>
+            </form>
         </section>
         
 
@@ -64,6 +86,6 @@
     <footer>
 
     </footer>
-    
+    <script src="novo.js"></script>
 </body>
 </html>
