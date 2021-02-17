@@ -6,6 +6,8 @@ body{
 	font-family: 'Montserrat', sans-serif;
 }
 
+
+
 header{
 	width: 100%;
 	background-color: #38819A;
@@ -28,8 +30,8 @@ header h1{
 }  */
 
 .container{   
-    padding: 4px 0;
-	width: 100%;	
+	width: 75%;
+	height: 100%;
 	margin: 0 auto;
 } 
 
@@ -79,3 +81,32 @@ header h1{
 	text-align: center;
 }
 
+#form-novo-pacient{
+	margin-top: 30px;
+}
+
+.campo{
+	width: 90%;
+	padding: .7em;
+	padding-bottom: 1em;
+	margin: 0;
+	border: 1px solid #CCCCCC;
+}
+
+/* .campo-medio{
+	display: inline-block;
+	padding-right: .5em;
+} */
+
+.grupo{
+	width: 30%;
+	margin: 0 2px;
+	display: inline-block;
+	padding: 10px 0px;
+}
+
+label{
+	color: #555;
+	display: block;
+	margin-bottom: .2em;
+}
