@@ -24,27 +24,24 @@
         <section class="container">
             <h2>Pacientes</h2>
             <table class = "tabela-imc" data-tabela-pacient>
-                <!-- <thead> -->
+                <thead>
                     <tr>
                         <th>Nome</th>
                         <th>IMC</th>
                         <th>Peso (Kg)</th>
                         <th>Altura (cm)</th>
-                        <th>Gordura (%)</th>
-                        <th colspan="2">Ações</th>
+                        <th colspan="1">Ações</th>
                     </tr>                
-                <!-- </thead> -->
-                <!-- <tbody> -->
-                    <tr class="linhas-pacientes" data-linha-pacient>
+                </thead>
+                <tbody data-linha-pacient>
+                    <tr class="linhas-pacientes">
                         <td class="nome">Mailson</td>
                         <td class="imc">29.86</td>
                         <td class="peso">100</td>
                         <td class="altura">183</td>
-                        <td class="gordura">26</td>
-                        <td class="info" id="info"> <button>Info</button> </td>
-                        <td class="delete" id="delete"> <button>Del</button> </td>
+                        <td class="delete" > <button id="delete">Apagar</button> </td>
                     </tr>                    
-                <!-- </tbody> -->
+                </tbody>
             </table>
         </section>
 
@@ -63,10 +60,7 @@
                     <label for="inputAltura">Altura (cm):</label>
                     <input type="text" id="inputAltura" name="inputAltura" class="campo campo-medio" placeholder="Digite a altura: ">
                 </div>
-                <div class="grupo">
-                    <label for="inputGordura">Gordura (%):</label>
-                    <input type="text" id="inputGordura" name="inputGordura" class="campo campo-medio" placeholder="Digite o percentual de gordura ">
-                </div>
+                
                 <button id="btn-adiciona" data-form-btn-adiciona>Adicionar</button>
             </form>
         </section>
@@ -78,5 +72,6 @@
 
     </footer>
     <script src="novo.js"></script>
+    
 </body>
 </html>

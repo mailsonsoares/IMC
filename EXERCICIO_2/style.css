@@ -23,20 +23,15 @@ header h1{
     font-size: 2em;    
 }
 
-
-/* main{
-	width: 940px;
-	margin: auto;
-}  */
-
 .container{   
 	width: 75%;
 	height: 100%;
 	margin: 0 auto;
 } 
 
+
 .container h2{
-	/* display: block; */
+
 	font-size: 1.5em;
 	color: #4b4949;
 	font-weight: bold;
@@ -44,7 +39,7 @@ header h1{
 	padding-bottom: .5em;
 	border-bottom: 1px solid #ccc;
 	margin-bottom: .5em;
-	margin-top: 1em;
+	margin-top: 2em;
 }
 
 
@@ -81,9 +76,11 @@ header h1{
 	text-align: center;
 }
 
-#form-novo-pacient{
-	margin-top: 30px;
+#form-novo-pacient, .tabela-imc{
+	margin-top: 10px;
 }
+
+
 
 .campo{
 	width: 90%;
