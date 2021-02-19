@@ -68,13 +68,14 @@ header h1{
 	margin: 0;
 }
 
-.paciente .imc, .peso, .altura, .gordura{
+.numerico{
 	text-align: right;
 }
 
- .info, .delete{
+.acao{
 	text-align: center;
 }
+
 
 #form-novo-pacient, .tabela-imc{
 	margin-top: 10px;

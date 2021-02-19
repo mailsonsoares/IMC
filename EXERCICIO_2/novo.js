@@ -1,6 +1,6 @@
 const novoPaciente = document.querySelector('[data-form-btn-adiciona]'); //usando um data- (data attribute) para capturar o elemento
 
-(() => { //encapsulando as funções para elas não tenham acesso global
+(() => { //encapsulando as funções para que elas não tenham acesso global
 
     novoPaciente.addEventListener('click', (eventoDoClick) => { //quando o evento de click é "escutado" o navegador envia um objeto, por 
                                                                 // "debaixo dos panos", como parâmetro contendo os dados desse evento.
@@ -20,27 +20,50 @@ const novoPaciente = document.querySelector('[data-form-btn-adiciona]'); //usand
         
         const tabela = document.querySelector('[data-linha-pacient]'); //criei uma váriavel para receber o seletor do DOM da tabela Paciente.   
 
-        //Aqui criei uma varável para os elementos <td>, 
+        //Aqui criei uma varável para cada elemento <td> da linha, 
         //que conterão os dados dos atributos do novo paciente e mais tarde serão 
         //apensados a uma nova linha <tr> da tabela.
-        const conteudo = `<td class="nome">${nome_input}</td>
-                        <td class="imc">${imc_input}</td>
-                        <td class="peso">${peso_input}</td>
-                        <td class="altura">${altura_input}</td>`;
+        
 
-        const novaLinha = document.createElement('tr'); //Aqui criei um elemento <tr> nova linha que receberá seu elmento filho
+        const conteudoNome = document.createElement('td');
+        conteudoNome.innerHTML = nome_input;
+        
+        const conteudoImc = document.createElement(`td`);
+        conteudoImc.innerHTML = imc_input;
+        conteudoImc.classList.add('numerico'); //atribuí a classe css numérico a nova célula criada
+
+
+        const conteudoPeso = document.createElement(`td`);
+        conteudoPeso.innerHTML = peso_input;
+        conteudoPeso.classList.add('numerico'); //atribuí a classe css numérico a nova célula criada
+
+        const conteudoAltura = document.createElement(`td`);        
+        conteudoAltura.innerHTML = altura_input;
+        conteudoAltura.classList.add('numerico'); //atribuí a classe css numérico a nova célula criada
+
+        const conteudoAcao = document.createElement(`td`);    
+        conteudoAcao.classList.add('acao'); //atribuí a classe css acao a nova célula criada
+        conteudoAcao.appendChild(CriaBotaoApagar());
+
+
+        const novaLinha = document.createElement(`tr`); //Aqui criei um elemento <tr> nova linha que receberá seu elmento filho
                                                         // a <td> criada anteriormente;
 
-        novaLinha.classList.add('linhas-pacientes'); //atribuí a mesma classe css a nova linha criada
+        novaLinha.classList.add('linhas-pacientes'); //atribuí a classe css a nova linha criada
 
-        novaLinha.innerHTML = conteudo; //Aqui atribuímos a variável conteúdo (que contém as <td> preenchidas com os dados)
-                                        // ao html <tr> da nova linha .
+         //Aqui apensamos as variáveis contendo os elementos <td> 
+         // e seus conteúdos a nova linha <tr>.
+
+        novaLinha.appendChild(conteudoNome);
+        novaLinha.appendChild(conteudoImc);
+        novaLinha.appendChild(conteudoPeso);
+        novaLinha.appendChild(conteudoAltura);
+        novaLinha.appendChild(conteudoAcao);
 
         tabela.appendChild(novaLinha); //Apensei a nova linha a tabela.
         
 
         formNovoPacient.reset(); //Reset do formulário limpando os campos.
-        
         
     });
 
@@ -65,25 +88,28 @@ const novoPaciente = document.querySelector('[data-form-btn-adiciona]'); //usand
         return imc.toFixed(2);
     }
 
-    var tbPacientes = document.querySelectorAll("table"); // var tbPacientes recebe um conjunto com todos os elementos da tabela
 
-    //console.log(pacientes);
-    tbPacientes.forEach(function(pacienteAlvo){ // forEach percorre o os elementos de tbPacientes passando cada elemento (pacienteAlvo) do array como 
-                                                //parametro para uma função anônima que escuta o evento de duplo clique do elemento paciente.
-    pacienteAlvo.addEventListener("dblclick", function(event){//evento que escuta o duplo clique e chama o método remove.
-        // console.log(event.target);
+    const CriaBotaoApagar = ()=>{
+        const botaoDeleta = document.createElement('button');       
+        botaoDeleta.innerText = 'Apagar'
+
+        botaoDeleta.addEventListener('click', ApagarRegistro);
         
-        if(event.target.tagName == 'TD'){
-                event.target.parentNode.classList.add("fadeOut"); //adiciona a classe css .fadeOut para desaparecer gradualmente da tela;
-            
-                setTimeout(function(){ //usamos a função do javascript setTimeout
-                event.target.parentNode.remove() // o event chama o target (alvo) do metodo remove para o parentNode (nó pai) ou seja, ao clicar em uma 
-                                                //td a tr inteira é que é removida.
-            },700);
-            }
-                
-        });	
-    });
-    
-        
+        return botaoDeleta;
+    }
+
+    const ApagarRegistro = (evento) => {
+        const botaoClicado = evento.target
+
+        const linhaInteira = botaoClicado.parentElement.parentElement;
+                             //<button>       <td>          <tr>
+                             
+        // console.log(linhaInteira);
+
+        linhaInteira.remove();
+
+        return botaoClicado;
+
+    }
+
 })()
