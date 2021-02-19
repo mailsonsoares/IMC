@@ -1,6 +1,6 @@
-const novoPaciente = document.querySelector('[data-form-btn-adiciona]'); //usando um data- (data attribute) para capturar o elemento
+import BotaoApagar from './componentes/botaoApagar.js'
 
-(() => { //encapsulando as funções para que elas não tenham acesso global
+const novoPaciente = document.querySelector('[data-form-btn-adiciona]'); //usando um data- (data attribute) para capturar o elemento
 
     novoPaciente.addEventListener('click', (eventoDoClick) => { //quando o evento de click é "escutado" o navegador envia um objeto, por 
                                                                 // "debaixo dos panos", como parâmetro contendo os dados desse evento.
@@ -43,7 +43,7 @@ const novoPaciente = document.querySelector('[data-form-btn-adiciona]'); //usand
 
         const conteudoAcao = document.createElement(`td`);    
         conteudoAcao.classList.add('acao'); //atribuí a classe css acao a nova célula criada
-        conteudoAcao.appendChild(CriaBotaoApagar());
+        conteudoAcao.appendChild(BotaoApagar());
 
 
         const novaLinha = document.createElement(`tr`); //Aqui criei um elemento <tr> nova linha que receberá seu elmento filho
@@ -82,34 +82,12 @@ const novoPaciente = document.querySelector('[data-form-btn-adiciona]'); //usand
 
     function calculaImc(peso, altura){
         let imc = 0;
-        cm = altura / 100
+        let cm = 0;
+        
+        cm = altura / 100;
         imc = peso / (cm * cm);
 
         return imc.toFixed(2);
     }
+    
 
-
-    const CriaBotaoApagar = ()=>{
-        const botaoDeleta = document.createElement('button');       
-        botaoDeleta.innerText = 'Apagar'
-
-        botaoDeleta.addEventListener('click', ApagarRegistro);
-        
-        return botaoDeleta;
-    }
-
-    const ApagarRegistro = (evento) => {
-        const botaoClicado = evento.target
-
-        const linhaInteira = botaoClicado.parentElement.parentElement;
-                             //<button>       <td>          <tr>
-                             
-        // console.log(linhaInteira);
-
-        linhaInteira.remove();
-
-        return botaoClicado;
-
-    }
-
-})()
