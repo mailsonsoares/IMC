@@ -11,10 +11,8 @@ const apagarRegistro = (evento) => {
     const botaoClicado = evento.target
 
     const linhaInteira = botaoClicado.parentElement.parentElement;
-                         //<button>       <td>          <tr>
-                         
-    // console.log(linhaInteira);
-
+                         //<button>       <td>          <tr>                         
+    
     linhaInteira.remove();
 
     return botaoClicado;
